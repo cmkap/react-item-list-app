@@ -1,27 +1,67 @@
-# React + TypeScript + Vite
+# React App - Frontend App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This is a simple React application that displays a list of items and allows users to add new items to the list.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Instructions to Run Locally
 
-## Expanding the ESLint configuration
+1. **Install Dependencies:**
+   ```bash
+   npm install
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+For Windows Command Prompt or PowerShell, you can use the same command.
 
-- Configure the top-level `parserOptions` property like this:
+2. **Run the Project:**
+npm run dev
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Scripts
+
+- `dev`: Run `vite` for development.
+- `build`: Build the project using TypeScript and Vite.
+- `lint`: Lint the code using ESLint.
+- `preview`: Preview the production build using Vite.
+
+## Dependencies
+
+- **Main Dependencies:**
+  - React
+  - React DOM
+  - React Hook Form
+  - Bootstrap
+  - Zod
+  - @hookform/resolvers
+
+- **Development Dependencies:**
+  - TypeScript
+  - Vite
+  - ESLint
+  - @typescript-eslint/parser
+  - @typescript-eslint/eslint-plugin
+  - @vitejs/plugin-react
+
+## Requirements
+
+### ItemList Component
+
+- Accepts an array of items (strings) as a prop.
+- Renders each item in an unordered list (`<ul>`).
+
+### App Component
+
+- Maintains an array of items in the state, initialized with sample items.
+- Renders the `ItemList` component, passing the items from the state as props.
+- Includes an input field for users to enter a new item and a button to add the item to the list.
+- When the button is clicked, the new item is added to the list, and the input field is cleared.
+
+### General
+
+- Uses functional components and hooks (e.g., `useState`).
+- Ensures the application is free of console errors and warnings.
+- Code is clean, readable, and well-structured.
+
+
+
+
+
