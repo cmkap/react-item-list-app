@@ -9,8 +9,12 @@ function App() {
 
   return (
     <>
-      <ListGroup items={items} heading="Cities" onDelete={(item) => setItems(items.filter((i) => i !== item))}/>
-      <Form onSubmit={data => setItems([data.item, ...items  ])}/>
+      <ListGroup
+        items={items}
+        heading="Item List"
+        onDelete={(item) => setItems(items.filter((i) => i !== item))}
+      />
+      <Form onSubmit={(data) => setItems([data.item, ...items])} />
     </>
   );
 }
