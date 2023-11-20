@@ -31,6 +31,7 @@ const Form = ({ onSubmit }: Props) => {
         reset();
       })}
     >
+        
       <div className="mb-3">
         <label htmlFor="item" className="form-label">
           Add to list

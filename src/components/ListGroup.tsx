@@ -13,7 +13,7 @@ const ListGroup = ({ items, heading, onDelete }: Props) => {
     <>
       <h1>{heading}</h1>
       {items.length === 0 && <p>No item found</p>}
-      <ul className="list-group">
+      <ul className="list-group mt-5">
         {items.map((item, index) => {
           return (
             <li
